@@ -4,6 +4,7 @@
 /* ================================================== global variables ================================================== */
 :root {
   --white-color: #ffffff;
+  --lightblue-color: #6495ed;
 }
 
 * {
@@ -18,10 +19,6 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  /* position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
   box-shadow: 0 0 2rem 1rem #c7cbf2;
   border-radius: 15px;
   padding: 2rem;
@@ -37,6 +34,12 @@
   text-transform: capitalize;
   flex-direction: column;
   padding: 20px;
+}
+
+.currency-converter-formcontainer {
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 .headline {
@@ -63,7 +66,7 @@
 }
 
 #currency-conversion-submitbtn {
-  background-color: #6495ed;
+  background-color: var(--lightblue-color);
   border: 1px solid transparent;
   color: var(--white-color);
   padding: 5px 8px;
@@ -74,16 +77,20 @@
 
 #currency-conversion-submitbtn:hover {
   background-color: var(--white-color);
-  border: 1px solid #6495ed;
-  color: #6495ed;
+  border: 1px solid var(--lightblue-color);
+  color: var(--lightblue-color);
   font-weight: bold;
 }
 
+/* ============================================== api response table container ============================================== */
 .converted-currency-result-container {
   display: flex;
   flex-direction: column;
   gap: 10px;
   width: 100%;
+  overflow: auto;
+  max-height: 50vh;
+  position: relative;
 }
 
 .converted-currency-area-description {
@@ -96,6 +103,14 @@
   /* display: none; */
 }
 
+thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--lightblue-color);
+  color: var(--white-color);
+}
+
 th {
   text-transform: capitalize;
   font-weight: 600;
@@ -106,4 +121,47 @@ th {
   border: 1px solid black;
   text-align: left;
   padding: 8px;
+}
+
+/* ============================================== popup notification box ============================================== */
+.overlay-notification-container {
+  display: none;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.overlay-notificationbox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--white-color);
+  border-radius: 5px;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-transform: capitalize;
+}
+
+.close-overlay-btn {
+  background-color: var(--lightblue-color);
+  color: var(--white-color);
+  text-transform: capitalize;
+  padding: 6px 23px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 100px) and (max-width: 867px) {
+  .currency-converter-container {
+    width: 90%;
+  }
 }

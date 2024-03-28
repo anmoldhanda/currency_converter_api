@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- ============================================== popup notification box ============================================== -->
+    <div class="overlay-notification-container">
+      <div class="overlay-notificationbox">
+        <p class="notification-text"></p>
+        <button class="close-overlay-btn">ok</button>
+      </div>
+    </div>
     <div class="projectdetails-container">
       <h2 class="headline">currency converter</h2>
       <p class="description">convert your currency according to your region</p>
@@ -18,12 +25,10 @@
           <label
             for="available-currencies-list"
             name="label-available-currencies-list"
-            >Select your currency to convert</label
-          >
+            >Select your currency to convert</label>
           <select
             name="available-currencies-list"
-            id="available-currencies-list-selecttag"
-          >
+            id="available-currencies-list-selecttag">
             <option value="indian rupees">INR</option>
             <option value="us dollar">USD</option>
             <option value="euro">EURO</option>
