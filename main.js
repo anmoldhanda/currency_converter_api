@@ -20,9 +20,9 @@ const close_overlay_btn = document.querySelector(".close-overlay-btn");
 const notification_text = document.querySelector(".notification-text");
 // ====================================== api credentials & other things related to api ======================================
 const populatedata_apirespone = async (user_selected_currency,currency_conversion_value) => {
-  const api_key = `apikey=cur_live_ICuUjcxfozHN1lEJSUCucvLEl9j1bzjgNA7L7RjG`;
-  // const base_currency = `&base_currency=INR`;
-  const api_url = `https://api.currencyapi.com/v3/latest?${api_key}`;
+  const api_key = `your api key`;
+  // const base_currency = `the base currency you want to compare with`;
+  const api_url = `your api url`;
   let table_data = "";
   const select_element = document.querySelector("select[name='available-currencies-list']");
   // ============================= selected currency from the select tag within the options value =============================
