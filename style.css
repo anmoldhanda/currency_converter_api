@@ -1,0 +1,109 @@
+/* ================================================== google fonts ================================================== */
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap");
+
+/* ================================================== global variables ================================================== */
+:root {
+  --white-color: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fira Code", monospace;
+}
+
+.currency-converter-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  box-shadow: 0 0 2rem 1rem #c7cbf2;
+  border-radius: 15px;
+  padding: 2rem;
+  gap: 10px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.projectdetails-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.headline {
+  font-weight: 600;
+}
+
+#input-convert-currency {
+  background: transparent;
+  outline: none;
+  margin: 15px 0;
+  padding: 5px 8px;
+  width: 100%;
+}
+
+#input-convert-currency.currency-conversion-error {
+  border: 1px solid #f58290;
+}
+
+#available-currencies-list-selecttag {
+  width: 100%;
+  background: transparent;
+  margin: 15px 0;
+  padding: 5px;
+}
+
+#currency-conversion-submitbtn {
+  background-color: #6495ed;
+  border: 1px solid transparent;
+  color: var(--white-color);
+  padding: 5px 8px;
+  border-radius: 5px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+#currency-conversion-submitbtn:hover {
+  background-color: var(--white-color);
+  border: 1px solid #6495ed;
+  color: #6495ed;
+  font-weight: bold;
+}
+
+.converted-currency-result-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.converted-currency-area-description {
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.converted-currency-result-tablebox {
+  border-collapse: collapse;
+  /* display: none; */
+}
+
+th {
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+td,
+th {
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+}

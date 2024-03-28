@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>currency converter</title>
+    <!-- =============================== custom css =============================== -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="projectdetails-container">
+      <h2 class="headline">currency converter</h2>
+      <p class="description">convert your currency according to your region</p>
+    </div>
+    <div class="currency-converter-container">
+      <div class="currency-converter-formcontainer">
+        <form action="#" method="get" class="currency-conversion-form">
+          <label
+            for="available-currencies-list"
+            name="label-available-currencies-list"
+            >Select your currency to convert</label
+          >
+          <select
+            name="available-currencies-list"
+            id="available-currencies-list-selecttag"
+          >
+            <option value="indian rupees">INR</option>
+            <option value="us dollar">USD</option>
+            <option value="euro">EURO</option>
+          </select>
+          <label for="input-convert-currency" name="label-convert-currency"
+            >Convert Currency</label
+          >
+          <input
+            type="text"
+            name="currency-conversion-inputfield"
+            id="input-convert-currency"
+            placeholder="enter the amount to convert currency"
+          />
+          <button id="currency-conversion-submitbtn">convert</button>
+        </form>
+      </div>
+      <div class="converted-currency-result-container">
+        <p class="converted-currency-area-description">
+          your converted currency will appear here
+        </p>
+        <table class="converted-currency-result-tablebox">
+          <thead>
+            <tr>
+              <th>currency</th>
+              <th>country code</th>
+              <th>value</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    <!-- =============================== custom js =============================== -->
+    <script src="main.js"></script>
+  </body>
+</html>
