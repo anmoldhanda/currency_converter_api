@@ -32,6 +32,14 @@ const populatedata_apirespone = async (user_selected_currency,currency_conversio
   console.log("currency conversion " + currency_conversion_inputfield);
   const converted_currency_result_tablebody = document.querySelector("tbody");
   try {
+    // ============================= show the loader before the api response printed to the DOM =============================
+    converted_currency_result_tablebody.innerHTML = `
+    <tbody>
+    <tr>
+      <img src="loading.svg" alt="loading gif api response">
+    </tr>
+    </tbody>
+    `;
     let api_response = await fetch(api_url);
     let json_response_apidata = await api_response.json();
     // console.log(json_response_apidata);
@@ -59,9 +67,7 @@ const populatedata_apirespone = async (user_selected_currency,currency_conversio
 };
 
 // ============================ if the validations are true then work with the api and give response ============================
-const currency_conversion_form = document.querySelector(
-  ".currency-conversion-form"
-);
+const currency_conversion_form = document.querySelector(".currency-conversion-form");
 currency_conversion_form.addEventListener("submit", (e) => {
   e.preventDefault();
   if (valid_input_convert_currency) {
